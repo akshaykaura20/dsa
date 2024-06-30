@@ -17,16 +17,25 @@
 # This is done using the integer division operator.
 # For e.g. 1234 // 10 = 123 (int) i.e. the integer quotient
 def optimal_and_brute_force():
-    n = int(input(""))
+    input_num = int(input(""))
     num_of_digits = 0
     reversed_number = 0
+
+    sign = 1 # preserving sign(+ or - number) for the end
+    if input_num < 0:
+        sign = -1
+    n = abs(input_num)
+
     while n != 0:
         num_of_digits += 1
         last_digit = n % 10 # extract last digit
         reversed_number = reversed_number * 10 + last_digit
         # remove last digit
         n = n // 10 # integer division that leaves the part after decimal
-    print(reversed_number)
+        # check overflow for 32 bit integers (leetcode)
+        if reversed_number > 2**31 - 1 or reversed_number < -2**31:
+            return 0
+    print(reversed_number * sign)
 
 ############################################################################
 # Complexity explanation
