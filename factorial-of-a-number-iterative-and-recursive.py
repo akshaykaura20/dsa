@@ -1,6 +1,6 @@
 # NUMBER OF APPROACHES: TWO (Recursive and Iterative)
 
-# TC: O(n), SC: O(1)
+# TC: O(n), SC: O(n)
 ############################################################################
 '''
 Algorithm explanation
@@ -40,6 +40,7 @@ fn(4)           fn(4)           fn(4)           fn(4) -> 4 * (6)
 fn(5)           fn(5)           fn(5)           fn(5)           fn(5) -> 5 * (24) = 120
 
 Since we are calling a function n times- TC: O(n)
+Also the max depth of call stack is n => SC: O(n)
 '''
 
 

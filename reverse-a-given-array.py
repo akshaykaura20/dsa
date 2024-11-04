@@ -1,6 +1,6 @@
 # NUMBER OF APPROACHES: TWO (Same complexity)
 
-# TC: O(n), SC: O(1)
+# TC: O(n), SC: O(n)
 ############################################################################
 '''
 Algorithm explanation
@@ -38,6 +38,7 @@ We are moving our two extreme ends inwards until they cross, that would mean,
 it takes n/2 fn calls to reverse the whole array.
 Since we are calling a function n times (well we know n/2 but for asymptotic purposes, its n)
 - TC: O(n)
+Also the max depth of call stack is n/2 => SC: O(n)
 
 Visualize call stack for n = 5
 
